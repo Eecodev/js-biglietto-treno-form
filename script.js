@@ -6,3 +6,6 @@
 - //va applicato uno sconto del 20% per i minorenni
 - //va applicato uno sconto del 40% per gli over 65.
 
+const kmPrice = 0.21;
+const discountUnder18 = 20;
+const discountOver65 = 40;
