@@ -8,7 +8,7 @@
 
 
 
-const button = document.querySelector('.submit');
+const button = document.getElementById('submit');
 console.log(button);
 
 
@@ -32,8 +32,8 @@ if ( Age === 'under-18' ) {
     price = price - (price * 20/100); 
 } else if ( Age === 'over-65' ) {
     price = price - (price * 40/100);
-} else (Age === 'over-18') {
-    console.log(price);
-}
+} 
+const ticket = document.getElementById( 'ticket' );
+ticket.innerHTML = 'Your ticket price is: €' + price;
 })
 
