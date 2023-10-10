@@ -13,17 +13,34 @@ console.log(button);
 
 
 button.addEventListener('click', function(){
-    const km = document.querySelector('.insert-km').value;
-    console.log(km);
+    const Km = document.querySelector('.insert-km').value;
+    console.log(Km);
 
-    const age = document.querySelector('.insert-age').value;
-    console.log(age)
+    const Age = document.querySelector('.insert-age').value;
+    console.log(Age);
 
 if (km === '' || age === ''){
     alert('devi inserire due valori !' )
 } else {
     console.log(km);
     console.log(age);
+}
+const kmPrice = 0.21;
+const discountUnder18 = 20;
+const discountOver65 = 40;
+
+let km, age, price;
+let message = 'Il prezzo del tuo biglietto è: ';
+
+if(isNaN(km) || isNaN(age)){
+    location.reload();
+}
+price = kmPrice * km;
+
+if(age < 18){
+    price = price - (price * discountUnder18/100);
+} else if(age >= 65){
+    price = price - (price * discountOver65/100);
 }
 })
 
